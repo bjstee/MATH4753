@@ -1,0 +1,17 @@
+Package: MATH4753stee0082Sp25
+Type: Package
+Title: MATH 4753 Lab Functions
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Benjamin", "Steele",
+      email = "bjsteele25@ou.edu",
+      role = c("aut", "cre")
+    )
+  )
+Description: This package is developed throughout the semester of MATH 4753
+    and used/updated in the labs.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
