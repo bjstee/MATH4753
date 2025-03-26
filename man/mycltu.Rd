@@ -3,9 +3,6 @@
 \name{mycltu}
 \alias{mycltu}
 \title{My CLT - Uniform Distribution}
-\usage{
-mycltu(n, iter, a = 0, b = 10)
-}
 \arguments{
 \item{n}{the sample size}
 
