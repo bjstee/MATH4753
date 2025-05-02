@@ -1,0 +1,83 @@
+---
+title: "MATH4753 Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{What the package does}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MATH4753stee0082Sp25)
+```
+
+
+# Introduction
+
+This is my R package for MATH 4753
+
+## FIREDAM
+```{r}
+data("FIREDAM")
+```
+Fire Damage Data
+
+## mybin
+```{r}
+MATH4753stee0082Sp25::mybin(iter=10000,n=15, p=0.3)
+```
+My Binomial Function
+
+## myboot2
+```{r}
+MATH4753stee0082Sp25::myboot2(x=rnorm(20,mean=10,sd=5),xlab="std deviation",fun="sd",col="lightblue")
+```
+Bootstrap estimation
+
+
+## mycltu
+```{r}
+MATH4753stee0082Sp25::mycltu(n=5,iter=20000,a=1,b=7)
+```
+A function showing an application of the central limit theorem on a uniformly distributed random variable
+
+## mymaxlik
+```{r}
+MATH4753stee0082Sp25::mymaxlik(c(3,3,4,3,4,5,5,4),param=seq(0,1,length=10001),lfun=function(x,param){log(dbinom(x,prob=param,size=20))},xlab=expression(pi),main="Binomial",cex.main=2)
+```
+My max likelihood function
+
+
+## myncurve
+```{r}
+MATH4753stee0082Sp25::myncurve(5.5, 2.3, 6)
+```
+My Normal Curve Function
+
+
+## mysq
+```{r}
+MATH4753stee0082Sp25::mysq(1:10)
+```
+Mysquared Function
+
+
+## ntickets
+```{r}
+MATH4753stee0082Sp25::ntickets(N=400, gamma=0.02, p=0.95)
+```
+Uses binomial and normal variables to test the number of tickets an airline should sell given parameters
+
+## scatterhist
+```{r}
+ddt <- read.csv("CDDT.csv")
+with(ddt, MATH4753stee0082Sp25::scatterhist(LENGTH,WEIGHT, xlab="LENGTH"))
+```
+Scatterplot Histogram
